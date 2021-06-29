@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D5DE325268AC0CE0063EC44 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 1D5DE324268AC0CE0063EC44 /* AnyCodable */; };
+		1D5DE328268ADB340063EC44 /* CoreDuet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5DE326268ADB340063EC44 /* CoreDuet.framework */; };
+		1D5DE32A268ADB340063EC44 /* CoreDuetContext.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5DE327268ADB340063EC44 /* CoreDuetContext.framework */; };
+		1D5DE32F268ADBF00063EC44 /* CDContextKeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5DE32E268ADBF00063EC44 /* CDContextKeyPath.swift */; };
+		1D5DE331268ADC100063EC44 /* _CDContextualKeyPath+CDContextKeyPathBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5DE330268ADC100063EC44 /* _CDContextualKeyPath+CDContextKeyPathBridge.swift */; };
 		1DEFB6C2268A547F00D056A6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEFB6C1268A547F00D056A6 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +28,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1DEFB6BE268A547F00D056A6 /* CoreDuet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoreDuet; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5DE326268ADB340063EC44 /* CoreDuet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreDuet.framework; path = Frameworks/CoreDuet.framework; sourceTree = "<group>"; };
+		1D5DE327268ADB340063EC44 /* CoreDuetContext.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreDuetContext.framework; path = Frameworks/CoreDuetContext.framework; sourceTree = "<group>"; };
+		1D5DE32D268ADB580063EC44 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1D5DE32E268ADBF00063EC44 /* CDContextKeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDContextKeyPath.swift; sourceTree = "<group>"; };
+		1D5DE330268ADC100063EC44 /* _CDContextualKeyPath+CDContextKeyPathBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_CDContextualKeyPath+CDContextKeyPathBridge.swift"; sourceTree = "<group>"; };
+		1DEFB6BE268A547F00D056A6 /* CoreDuetTinker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoreDuetTinker; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DEFB6C1268A547F00D056A6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1DEFB6D6268AB18D00D056A6 /* CoreDuet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreDuet.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D5DE325268AC0CE0063EC44 /* AnyCodable in Frameworks */,
+				1D5DE328268ADB340063EC44 /* CoreDuet.framework in Frameworks */,
+				1D5DE32A268ADB340063EC44 /* CoreDuetContext.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,15 +55,17 @@
 		1DEFB6B5268A547F00D056A6 = {
 			isa = PBXGroup;
 			children = (
+				1D5DE32D268ADB580063EC44 /* README.md */,
 				1DEFB6C0268A547F00D056A6 /* CoreDuet */,
 				1DEFB6BF268A547F00D056A6 /* Products */,
+				1DEFB6C8268A548B00D056A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1DEFB6BF268A547F00D056A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DEFB6BE268A547F00D056A6 /* CoreDuet */,
+				1DEFB6BE268A547F00D056A6 /* CoreDuetTinker */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,16 +74,28 @@
 			isa = PBXGroup;
 			children = (
 				1DEFB6C1268A547F00D056A6 /* main.swift */,
+				1DEFB6D6268AB18D00D056A6 /* CoreDuet.entitlements */,
+				1D5DE32E268ADBF00063EC44 /* CDContextKeyPath.swift */,
+				1D5DE330268ADC100063EC44 /* _CDContextualKeyPath+CDContextKeyPathBridge.swift */,
 			);
 			path = CoreDuet;
+			sourceTree = "<group>";
+		};
+		1DEFB6C8268A548B00D056A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D5DE326268ADB340063EC44 /* CoreDuet.framework */,
+				1D5DE327268ADB340063EC44 /* CoreDuetContext.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1DEFB6BD268A547F00D056A6 /* CoreDuet */ = {
+		1DEFB6BD268A547F00D056A6 /* CoreDuetTinker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEFB6C5268A547F00D056A6 /* Build configuration list for PBXNativeTarget "CoreDuet" */;
+			buildConfigurationList = 1DEFB6C5268A547F00D056A6 /* Build configuration list for PBXNativeTarget "CoreDuetTinker" */;
 			buildPhases = (
 				1DEFB6BA268A547F00D056A6 /* Sources */,
 				1DEFB6BB268A547F00D056A6 /* Frameworks */,
@@ -77,9 +105,12 @@
 			);
 			dependencies = (
 			);
-			name = CoreDuet;
+			name = CoreDuetTinker;
+			packageProductDependencies = (
+				1D5DE324268AC0CE0063EC44 /* AnyCodable */,
+			);
 			productName = CoreDuet;
-			productReference = 1DEFB6BE268A547F00D056A6 /* CoreDuet */;
+			productReference = 1DEFB6BE268A547F00D056A6 /* CoreDuetTinker */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -105,11 +136,14 @@
 				Base,
 			);
 			mainGroup = 1DEFB6B5268A547F00D056A6;
+			packageReferences = (
+				1D5DE323268AC0CE0063EC44 /* XCRemoteSwiftPackageReference "AnyCodable" */,
+			);
 			productRefGroup = 1DEFB6BF268A547F00D056A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1DEFB6BD268A547F00D056A6 /* CoreDuet */,
+				1DEFB6BD268A547F00D056A6 /* CoreDuetTinker */,
 			);
 		};
 /* End PBXProject section */
@@ -120,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEFB6C2268A547F00D056A6 /* main.swift in Sources */,
+				1D5DE32F268ADBF00063EC44 /* CDContextKeyPath.swift in Sources */,
+				1D5DE331268ADC100063EC44 /* _CDContextualKeyPath+CDContextKeyPathBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,9 +280,11 @@
 		1DEFB6C6268A547F00D056A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CoreDuet/CoreDuet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UW2D7F2RU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -255,9 +293,11 @@
 		1DEFB6C7268A547F00D056A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CoreDuet/CoreDuet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UW2D7F2RU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -275,7 +315,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEFB6C5268A547F00D056A6 /* Build configuration list for PBXNativeTarget "CoreDuet" */ = {
+		1DEFB6C5268A547F00D056A6 /* Build configuration list for PBXNativeTarget "CoreDuetTinker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEFB6C6268A547F00D056A6 /* Debug */,
@@ -285,6 +325,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D5DE323268AC0CE0063EC44 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flight-School/AnyCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D5DE324268AC0CE0063EC44 /* AnyCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D5DE323268AC0CE0063EC44 /* XCRemoteSwiftPackageReference "AnyCodable" */;
+			productName = AnyCodable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1DEFB6B6268A547F00D056A6 /* Project object */;
 }

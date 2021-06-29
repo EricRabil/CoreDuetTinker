@@ -1,0 +1,5 @@
+framework module CoreDuetSync [extern_c] {
+    umbrella header "CoreDuetSync.h"
+    export *
+    module * { export * }
+}
